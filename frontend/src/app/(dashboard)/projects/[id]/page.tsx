@@ -17,6 +17,7 @@ import Link from 'next/link';
 import { formatDate, getPriorityColor, cn } from '@/lib/utils';
 import { getSocket, joinProject, leaveProject } from '@/lib/socket';
 import { useQueryClient } from '@tanstack/react-query';
+import toast from 'react-hot-toast';
 import type { Task } from '@/types';
 
 export default function ProjectDetailPage() {
