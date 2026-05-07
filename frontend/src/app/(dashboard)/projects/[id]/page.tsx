@@ -7,7 +7,7 @@ import DashboardLayout from '@/components/layout/DashboardLayout';
 import KanbanBoard from '@/components/tasks/KanbanBoard';
 import CalendarView from '@/components/projects/CalendarView';
 import TaskModal from '@/components/tasks/TaskModal';
-import CreateTaskModal from '@/components/projects/CreateTaskModal';
+import CreateTaskModal from '@/components/tasks/CreateTaskModal';
 import { Avatar, AvatarGroup } from '@/components/shared/Avatar';
 import { Skeleton } from '@/components/shared/SkeletonLoaders';
 import { motion } from 'framer-motion';
@@ -17,7 +17,6 @@ import Link from 'next/link';
 import { formatDate, getPriorityColor, cn } from '@/lib/utils';
 import { getSocket, joinProject, leaveProject } from '@/lib/socket';
 import { useQueryClient } from '@tanstack/react-query';
-import { useEffect } from 'react';
 import type { Task } from '@/types';
 
 export default function ProjectDetailPage() {
