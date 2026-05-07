@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Loader2, User, Calendar, Tag, MessageSquare, Send, Paperclip, Clock, History } from 'lucide-react';
+import { X, Loader2, User, Calendar, Tag, MessageSquare, Send, Paperclip, Clock, History, Zap, Plus } from 'lucide-react';
 import { useMutation, useQueryClient, useQuery } from '@tanstack/react-query';
 import { taskService } from '@/services/taskService';
 import { Avatar } from '@/components/shared/Avatar';

@@ -64,13 +64,4 @@ export const taskService = {
     const res = await api.put('/tasks/reorder', { tasks });
     return res.data;
   },
-
-  uploadAttachment: async (id: string, file: File) => {
-    const formData = new FormData();
-    formData.append('attachment', file);
-    const res = await api.post(`/tasks/${id}/attachments`, formData, {
-      headers: { 'Content-Type': 'multipart/form-data' },
-    });
-    return res.data;
-  },
 };

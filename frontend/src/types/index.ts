@@ -72,6 +72,7 @@ export interface Task {
   priority: 'low' | 'medium' | 'high' | 'critical';
   deadline: string | null;
   estimatedHours: number | null;
+  timeSpent?: number;
   project: Project | string;
   assignee: User | null;
   createdBy: User;
