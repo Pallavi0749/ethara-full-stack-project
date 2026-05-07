@@ -1,0 +1,21 @@
+import type { NextConfig } from 'next';
+
+const nextConfig: NextConfig = {
+  images: {
+    domains: ['localhost'],
+    remotePatterns: [
+      { protocol: 'http', hostname: 'localhost', port: '5000' },
+      { protocol: 'https', hostname: '*.railway.app' },
+    ],
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api'}/:path*`,
+      },
+    ];
+  },
+};
+
+export default nextConfig;
